@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1 class="User1">User</h1>
+    <div class="d-block mx-auto w-50 my-3 border p-3" >
+        <h5>
+            Full Name: {{single_user.first_name}} 
+            {{single_user.last_name}}
+        </h5>
+        <h5>Email: {{single_user.email}}</h5>
+        <a href="/" class="btn btn-lg btn-info">Edit</a>
+    </div>
+
+
+</body>
+</html>
