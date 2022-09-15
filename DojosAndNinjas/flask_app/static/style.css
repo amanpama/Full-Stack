@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.indexpage {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.newninjabox {
+    display: flex;
+    justify-content: center;
+}
