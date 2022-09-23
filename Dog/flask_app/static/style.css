@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F8F9FA;
+}
+
+#navBar {
+    margin: 0 auto;
+}
+
+h1{
+    margin: 0;
+}
+
+.DogPic {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.mainpage {
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    display: flex;
+}
+
+.dogs3 {
+    width: 60%;
+    height: 60vh;
+    display: flex;
+}
+
+.dogsInside {
+    width: 33.3%;
+    height: 99%;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.adoptionPic {
+    width: 99%;
+    height: 36vh;
+}
+
+.DogPictures {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.buttonsPost {
+    margin: 7px;
+}
+
+.dogs2 {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        justify-content: space-evenly;
+}
+
+.dogsInside2 {
+    width: 30%;
+    height: 99%;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mydogs {
+        width: 100%;
+        height: 50vh;
+}
+
+.textMe {
+    font-size: larger;
+}

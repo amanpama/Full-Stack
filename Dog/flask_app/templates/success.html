@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Success</title>
+</head>
+
+<body>
+    <h1 class="text-center bg-light">Pama Rescues</h1>
+    <nav id="navBar" class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/PostAdoption">Post for Adoption</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/success">Success</a>
+            <div>
+                {% if "logged_id" not in session %}
+                <li class="nav-item">
+                    <a href="/login"><button class="btn btn-outline-primary" type="submit">Sign In</button></a>
+                </li>
+                {% endif %}
+                {% if "logged_id" in session %}
+                <li class="nav-item">
+                    <a href="/logout"><button class="btn btn-outline-primary" type="submit">Logout</a>
+                </li>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <div class="DogPic">
+        <img class="DogPic" src="/static/images/happy.jpg" alt="pup!">
+    </div>
+    <h1 class="text-center">Successful Stories</h1>
+    <div class="dogs2">
+        <div class="dogsInside2">
+            <h1 class="text-center">Gopi & Nina</h1>
+            <div class="mydogs">
+                <a href="mailto:amanpama@yahoo.com"><img class="DogPictures" src="/static/images/gopi.jpg"
+                        alt="pup1"></a>
+                <div class="textMe">
+                    This is Gopi and Nina. She is seven years old Gopi had gotten her from the dog pound when she was
+                    about two years old. Nina is the perfect example of how a dog can change your life Gopi cannot go a
+                    day without her. Nina also changes the family dynamic, everyone in the family is spending more time
+                    with eachother now that they have to walk and feed Nina.
+                </div>
+            </div>
+        </div>
+        <div class="dogsInside2">
+            <h1 class="text-center">Romika & Kobe</h1>
+            <div class="mydogs">
+                <img class="DogPictures" src="/static/images/romika.jpeg" alt="pup2">
+                <div class="textMe">
+                    Romika rescued Kobe when he was still a puppy. Kobe has become the center of Romika's life. Having a dog taught Romika a lot of displine and how to take care of something that relys on you every single day. She has to plan her day accordly to Kobe which teaches all young adults how to be responsible.
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

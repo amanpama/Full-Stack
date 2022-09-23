@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Main Page</title>
+</head>
+
+<body>
+    <h1 class="text-center bg-light">Pama Rescues</h1>
+    <nav id="navBar" class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/PostAdoption">Post for Adoption</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/success">Success</a>
+            <div>
+                {% if "logged_id" not in session %}
+                <li class="nav-item">
+                    <a href="/login"><button class="btn btn-outline-primary" type="submit">Sign In</button></a>
+                </li>
+                {% endif %}
+                {% if "logged_id" in session %}
+                <li class="nav-item">
+                    <a href="/logout"><button class="btn btn-outline-primary" type="submit">Logout</a>
+                </li>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <div class="DogPic">
+        <img class="DogPic" src="/static/images/puppyBackground.jpeg" alt="pup!">
+    </div>
+    <h1 class="text-center">Dogs Up For Adoption</h1>
+    <div class="mainpage">
+        <div class="dogs3">
+            <div class="dogsInside">
+                <h1 class="text-center">Rex</h1>
+                <div class="adoptionPic">
+                    <a href="mailto:amanpama@yahoo.com"><img class="DogPictures" src="/static/images/German.jpeg"
+                            alt="pup1"></a>
+                </div>
+                <li><b>Breed:</b> German Shepard</li>
+                <li><b>Age:</b> 4</li>
+                <li><b>Weight:</b> 120lbs</li>
+                <li><b>Sex:</b> Male</li>
+                <li><b>Birthday:</b> 09/02/2018 </li>
+                <li><b>Personality:</b> Playful, Loving</li>
+            </div>
+            <div class="dogsInside">
+                <h1 class="text-center">Goldie</h1>
+                <div class="adoptionPic">
+                    <img class="DogPictures" src="/static/images/golden.jpeg" alt="pup2">
+                </div>
+                <li><b>Breed:</b> Golden Retriever</li>
+                <li><b>Age:</b> 6</li>
+                <li><b>Weight:</b> 110lbs</li>
+                <li><b>Sex:</b> Male</li>
+                <li><b>Birthday:</b> 07/07/2016 </li>
+                <li><b>Personality:</b> Full of energy</li>
+            </div>
+            <div class="dogsInside">
+                <h1 class="text-center">Dory</h1>
+                <div class="adoptionPic">
+                    <img class="DogPictures" src="/static/images/shiba.webp" alt="pup3">
+                </div>
+                <li><b>Breed:</b> Shiba</li>
+                <li><b>Age:</b> 2</li>
+                <li><b>Weight:</b> 90lbs</li>
+                <li><b>Sex:</b> Female</li>
+                <li><b>Birthday:</b> 09/10/2020 </li>
+                <li><b>Personality:</b> Great around kids</li>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

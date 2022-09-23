@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>About Me</title>
+</head>
+
+<body>
+    <h1 class="text-center bg-light">Pama Rescues</h1>
+    <nav id="navBar" class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/PostAdoption">Post for Adoption</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/success">Success</a>
+            <div>
+                {% if "logged_id" not in session %}
+                <li class="nav-item">
+                    <a href="/login"><button class="btn btn-outline-primary" type="submit">Sign In</button></a>
+                </li>
+                {% endif %}
+                {% if "logged_id" in session %}
+                <li class="nav-item">
+                    <a href="/logout"><button class="btn btn-outline-primary" type="submit">Logout</a>
+                </li>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <div class="DogPic">
+        <img class="DogPic" src="/static/images/puppies.jpeg" alt="pup!">
+    </div>
+    <h1 class="text-center">About Me</h1>
+    <div class="dogs2">
+        <div class="dogsInside2">
+            <h1 class="text-center">Jayla</h1>
+            <div class="mydogs">
+                <a href="mailto:amanpama@yahoo.com"><img class="DogPictures" src="/static/images/jayla.jpg"
+                        alt="pup1"></a>
+                        <div class="textMe">
+                            Hello everyone, thank you for visiting my page, my name is Amanpreet Pama. I am a full stack developer and I thought it would be an amazing idea for my first full stack application to be something I have a enarmous amount of love for. I currently have three dogs that have changed my life. I want everyone to have the feeling of having a dog especially dogs that currenlty dont have a home.
+                        </div>
+            </div>
+        </div>
+        <div class="dogsInside2">
+            <h1 class="text-center">Tiger</h1>
+            <div class="mydogs">
+                <img class="DogPictures" src="/static/images/tiger.jpeg" alt="pup2">
+                <div class="textMe">
+                    Why I believe adopting is more important then just buying a new puppy. When you adopt a new pet, you are not just saving the one you have adopted but you also end up making room for another pet in the shelter. Every year animal shelters take in millions of pets, they need your help to reduce this number by adopting.
+                    
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
